@@ -16,8 +16,14 @@ Screen {
 }
 
 #message {
-    height: 1fr;              /* use remaining space */
+    height: 1fr;              
     border: double #8d99ae;
+    width: 100%;
+    height: 100%;
+}
+
+#message ListItem > Static {
+    text-align: left;
 }
 
 #message:focus {
@@ -30,7 +36,7 @@ Screen {
 }
 
 #message_input {
-    width: 1fr;               /* take remaining space */
+    width: 1fr;               
     border: double #8d99ae;
 }
 
@@ -39,7 +45,7 @@ Screen {
 }
 
 #btn {
-    width: 24;                /* fixed width feels nicer than % in TUI */
+    width: 24;               
     border: double #8d99ae;
 }
 
@@ -48,8 +54,7 @@ Screen {
 }
 
 /* ========= Modals ========= */
-/* You can target both screens explicitly */
-StartingModal,
+
 UsernameServerModal {
     background: rgba(0, 0, 0, 0.75);
     align: center middle;
@@ -62,10 +67,9 @@ UsernameServerModal {
 
     padding: 1 2;
     border: double #8d99ff;
-    background: #0b0f1a;      /* give it a real panel background */
+    background: #0b0f1a;      
 }
 
-/* If you keep id="title" in modals, scope it so it doesn't affect #top */
 #opt-container > #title {
     width: 100%;
     text-align: center;

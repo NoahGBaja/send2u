@@ -44,7 +44,7 @@ class Server:
         client_addr = writer.get_extra_info("peername")[0]
         name = (await reader.readline()).decode().strip()
         self.devices[writer] = User(name, client_addr)
-        await self.broadcast(f"[bold green] -- {name} joined -- [/bold green]")
+        await self.broadcast(f"[bold green] [+] {name} joined [/bold green]")
 
         if len(name) > self.username_len:
             display_name = name[:self.username_len - 3] + "..."
