@@ -1,6 +1,6 @@
 /* App-wide */
 Screen {
-    padding: 1;
+    padding: 0;
 }
 
 /* ========= Main UI ========= */
@@ -9,17 +9,19 @@ Screen {
     text-align: center;
     border: double #8d99ae;
     padding: 1;
+    width: 1fr;
 }
 
 #chat {
-    width: 100%;
+    width: 1fr;
+    height: 1fr;
 }
 
 #message {
     height: 1fr;              
     border: double #8d99ae;
-    width: 100%;
-    height: 100%;
+    width: 1fr;
+    height: 1fr;
 }
 
 #message ListItem > Static {
@@ -31,8 +33,8 @@ Screen {
 }
 
 #message_container {
-    width: 100%;
-    height: auto;
+    width: 1fr;
+    height: 3;
 }
 
 #message_input {
@@ -58,6 +60,8 @@ Screen {
 UsernameServerModal {
     background: rgba(0, 0, 0, 0.75);
     align: center middle;
+    width: 1fr;
+    height: 1fr;
 }
 
 /* Modal box */
@@ -67,13 +71,13 @@ UsernameServerModal {
 
     padding: 1 2;
     border: double #8d99ff;
-    background: #0b0f1a;      
+    background: #0b0f1a;
 }
 
 #opt-container > #title {
     width: 100%;
-    text-align: center;
     height: auto;
+    text-align: center;
     margin-bottom: 1;
 }
 
