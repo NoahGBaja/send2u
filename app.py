@@ -176,6 +176,7 @@ class Send2U(App):
         
         if self.server:
             self.server_task = asyncio.create_task(self.server.start_server())
+            self.notify(f"Server IP: {self.server.ip}")
         self.client_task = asyncio.create_task(self.client.connect_to_server(self.user.connected_to, self.user.username))
 
     async def _drain_incoming(self):

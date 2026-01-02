@@ -16,7 +16,7 @@ class Server:
 
     def get_ip(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect("192.168.1.1", 80)
+        s.connect(("192.168.1.1", 80))
         try:
             return s.getsockname()[0]
         except:
