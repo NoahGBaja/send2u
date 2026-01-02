@@ -1,0 +1,99 @@
+/* App-wide */
+Screen {
+    padding: 1;
+}
+
+/* ========= Main UI ========= */
+
+#top {
+    text-align: center;
+    border: double #8d99ae;
+    padding: 1;
+}
+
+#chat {
+    width: 100%;
+}
+
+#message {
+    height: 1fr;              /* use remaining space */
+    border: double #8d99ae;
+}
+
+#message:focus {
+    border: double #8d99ff;
+}
+
+#message_container {
+    width: 100%;
+    height: auto;
+}
+
+#message_input {
+    width: 1fr;               /* take remaining space */
+    border: double #8d99ae;
+}
+
+#message_input:focus {
+    border: double #8d99ff;
+}
+
+#btn {
+    width: 24;                /* fixed width feels nicer than % in TUI */
+    border: double #8d99ae;
+}
+
+#btn:focus {
+    border: double #8d99ff;
+}
+
+/* ========= Modals ========= */
+/* You can target both screens explicitly */
+StartingModal,
+UsernameServerModal {
+    background: rgba(0, 0, 0, 0.75);
+    align: center middle;
+}
+
+/* Modal box */
+#opt-container {
+    width: 60;
+    height: auto;
+
+    padding: 1 2;
+    border: double #8d99ff;
+    background: #0b0f1a;      /* give it a real panel background */
+}
+
+/* If you keep id="title" in modals, scope it so it doesn't affect #top */
+#opt-container > #title {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 1;
+}
+
+/* Option list */
+#option-menu {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+ListItem {
+    width: 100%;
+    padding: 0 1;
+}
+
+ListItem > Static {
+    width: 100%;
+    text-align: center;
+}
+
+#opt-container > .modal-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1;
+}
